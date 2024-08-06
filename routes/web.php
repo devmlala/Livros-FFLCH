@@ -8,9 +8,10 @@ use App\Http\Controllers\LivroController;
 Route::get('/',[IndexController::class,'index']);
 
 
-
 # rotas para CRUD do model Livro 
-Route::get('/livros/create', [LivroController::class,'create']);
-Route::post('/livros', [LivroController::class,'store']);
+
 Route::get('/livros', [LivroController::class,'index']);
+Route::post('/livros', [LivroController::class,'store']);
+
+Route::get('/livros/create', [LivroController::class,'create']);
 

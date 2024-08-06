@@ -5,9 +5,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\LivroRequest;
 use App\Models\Livro;
 
-
-
-
 class LivroController extends Controller
 {
 
@@ -25,7 +22,6 @@ class LivroController extends Controller
             'livros' => $livros
         ]);
     }
-
 
     public function create(){
         return view('livros.create');
@@ -48,11 +44,7 @@ class LivroController extends Controller
         $livro->save();
         return redirect('/livros');
 
-
         //dd('cheguei');
     }
-
-
-
 
 }

@@ -24,7 +24,7 @@ class LivroRequest extends FormRequest
             'titulo' => 'required',
             'autor'  => 'required',
             'isbn' => 'required|integer',
-            'preco' => 'required|integer',
+            'preco' => 'required|numeric',
         ];
         return $rules;
     }
@@ -35,13 +35,12 @@ class LivroRequest extends FormRequest
             ]);
     }
 
-    public function messages()
-{
+    public function messages(){
     #personalizar mensagens
-    return [
-        'titulo.required' => 'Este titulo é requisitado',
-        'isbn.required' => 'Este isbn é requerido',
-    ];
-}
+        return [
+            'titulo.required' => 'Este titulo é requisitado',
+            'isbn.required' => 'Este isbn é requerido',
+            ];
+    }
 
 }
